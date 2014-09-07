@@ -1,17 +1,17 @@
 {
-  "name": "ng-fs",
+  "name": "fs-api",
   "version": "0.0.0",
-  "description": "nodegear filesystem storage",
-  "main": "bin/ng-fs",
+  "description": "nodegear filesystem storage api",
+  "main": "bin/fs-api",
   "scripts": {
     "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
-    "url": "git@lab.castawaylabs.com:nodegear/ng-fs.git"
+    "url": "git@github.com:nodegear/fs-api.git"
   },
   "author": "Matej Kramny <matej@matej.me>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
     "express": "^4.8.8",

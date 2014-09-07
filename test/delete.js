@@ -3,7 +3,7 @@ var http = require('http');
 var should = require('should');
 var config = require('../lib/config');
 
-require('../bin/ng-fs');
+require('../bin/fs-api');
 
 request = request('http://127.0.0.1:'+config.port);
 
