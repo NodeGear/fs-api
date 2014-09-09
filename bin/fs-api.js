@@ -2,19 +2,19 @@ var http = require('http'),
 	fs = require('fs'),
 	formidable = require('formidable'),
 	path = require('path'),
-	config = require('../lib/config'),
+	credentials = require('../lib/credentials'),
 	spawn = require('child_process').spawn,
 	async = require('async');
 
 http.createServer(function (req, res) {
-	if (!req.headers['authorization'] || req.headers['authorization'] != config.auth) {
+	if (!req.headers['authorization'] || req.headers['authorization'] != credentials.auth) {
 		res.writeHead(401);
 		res.end();
 
 		return;
 	}
 
-	var filePath = path.join(config.files, path.normalize(req.url));
+	var filePath = path.join(credentials.files, path.normalize(req.url));
 	var method = req.method.toLowerCase();
 
 	if (method == 'post' || method == 'put') {
@@ -69,4 +69,4 @@ http.createServer(function (req, res) {
 		stream.pipe(res);
 		return;
 	}
-}).listen(config.port);
+}).listen(credentials.port);
