@@ -70,3 +70,5 @@ http.createServer(function (req, res) {
 		return;
 	}
 }).listen(credentials.port);
+
+console.log('HTTP server listening to', credentials.port);

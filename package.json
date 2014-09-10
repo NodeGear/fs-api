@@ -4,7 +4,8 @@
   "description": "nodegear filesystem storage api",
   "main": "bin/fs-api",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec",
+    "start": "node bin/fs-api"
   },
   "repository": {
     "type": "git",
